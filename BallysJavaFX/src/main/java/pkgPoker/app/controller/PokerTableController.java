@@ -177,14 +177,14 @@ public class PokerTableController implements Initializable {
 
 public void Handle_TableState(Table HubPokerTable) {
 		
-		HashMap<UUID, Player> lop = HubPokerTable.GetTablePlayer();
+		HashMap<UUID, Player> lop = HubPokerTable.GetTablePlayers();
 		ArrayList<Player> listofplayers = (ArrayList<Player>) lop.values();
 		
 		for(Player aplayer : listofplayers)
 		{
 			if(aplayer.getiPlayerPosition() == 1)
 			{
-				lblPlayerPos1.setText(p.getPlayerName());
+				lblPlayerPos1.setText(aplayer.getPlayerName());
 				
 				
 				
